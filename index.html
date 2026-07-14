@@ -8,10 +8,31 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>Merlin's Eye</title>
-    <script type="module" crossorigin src="./assets/index-CkqCGohB.js"></script>
+    <script type="module" crossorigin src="./assets/index-CykStf1u.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-nqMpL4T3.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
   <body>
     <div id="root"></div>
+    <p id="page-intro-text" style="text-align: center; margin: 8px 16px 16px; color: #2c3e50;">
+      這是一個玩阿瓦隆的好工具
+    </p>
+    <script>
+      (function () {
+        const introMap = {
+          zh: '這是一個玩阿瓦隆的好工具',
+          en: 'This is a great tool for playing Avalon.',
+        };
+
+        window.updatePageIntroText = function updatePageIntroText(language) {
+          const element = document.getElementById('page-intro-text');
+          if (!element) return;
+          const normalizedLanguage = language === 'en' ? 'en' : 'zh';
+          element.textContent = introMap[normalizedLanguage];
+        };
+
+        const browserLanguage = (navigator.language || '').toLowerCase();
+        window.updatePageIntroText(browserLanguage.startsWith('zh') ? 'zh' : 'en');
+      })();
+    </script>
   </body>
 </html>
