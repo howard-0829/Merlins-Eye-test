@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="./assets/icon-Dw_D1cEz.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Merlin's Eye" />
-    <meta property="og:description" content="這是一個玩阿瓦隆的好工具" />
+    <meta property="og:description" content="這是一個阿瓦隆的計票工具" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/icon-Dw_D1cEz.png" />
     <meta property="og:url" content="/" />
@@ -14,7 +14,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>Merlin's Eye</title>
-    <script type="module" crossorigin src="./assets/index-BCVcJ54M.js"></script>
+    <script type="module" crossorigin src="./assets/index-DsguqBbo.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-nqMpL4T3.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
   <body>
@@ -22,23 +22,5 @@
     <p id="page-intro-text" style="text-align: center; margin: 8px 16px 16px; color: #2c3e50;">
       這是一個玩阿瓦隆的好工具
     </p>
-    <script>
-      (function () {
-        const introMap = {
-          zh: '這是一個玩阿瓦隆的好工具',
-          en: 'This is a great tool for playing Avalon.',
-        };
-
-        window.updatePageIntroText = function updatePageIntroText(language) {
-          const element = document.getElementById('page-intro-text');
-          if (!element) return;
-          const normalizedLanguage = language === 'en' ? 'en' : 'zh';
-          element.textContent = introMap[normalizedLanguage];
-        };
-
-        const browserLanguage = (navigator.language || '').toLowerCase();
-        window.updatePageIntroText(browserLanguage.startsWith('zh') ? 'zh' : 'en');
-      })();
-    </script>
   </body>
 </html>
